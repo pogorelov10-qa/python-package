@@ -1,21 +1,19 @@
 import sys
-
-from hexlet_python_package.half import half
-
+from more_itertools import sliced
 
 def main():
-    if len(sys.argv) < 2:
-        print("Error: You must provide a number as an argument.")
-        return
-
-    possible_number = sys.argv[1]
-
-    try:
-        number = float(possible_number)
-        print(half(number))
-    except ValueError:
-        print(f"Error: '{possible_number}' is not a valid number.")
-
+    if len(sys.argv) > 1:
+        try:
+            n = int(sys.argv[1])
+            # Пример логики: выводим результат вычислений
+            result = n / 2  # или ваша логика
+            print(result)
+        except ValueError:
+            print("Please provide an integer")
+            sys.exit(1)
+    else:
+        print("Usage: hexlet-python-package <number>")
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
