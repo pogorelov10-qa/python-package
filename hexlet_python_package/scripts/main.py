@@ -1,5 +1,5 @@
 import sys
-from more_itertools import sliced
+
 
 def main():
     if len(sys.argv) > 1:
@@ -14,6 +14,7 @@ def main():
     else:
         print("Usage: hexlet-python-package <number>")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
